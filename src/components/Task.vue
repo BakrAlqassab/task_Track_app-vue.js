@@ -1,5 +1,5 @@
 <template>
-  <div :class="[task.reminder ? 'reminder' : '', 'task']">
+  <div @dblclick="$emit('toggle-reminder',task.id)" :class="[task.reminder ? 'reminder' : '', 'task']">
     <h3>
       {{ task.text }}
       <!--           Font Awesome             -->
